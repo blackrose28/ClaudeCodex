@@ -62,6 +62,12 @@ After the planner returns, the main agent must:
 2. show the same plan to the user
 3. only then continue
 
+The reviewer subagent must return only the final review.
+After the reviewer returns, the main agent must:
+1. write the returned content to `.ai/artifacts/latest-review.md`
+2. show the same review to the user
+3. only then continue
+
 The task is not complete until the artifact file has been written successfully.
 
 ## Codex execution requirements
@@ -102,15 +108,15 @@ When calling the Codex MCP tool, always use:
 
 - cwd: "."
 - approval-policy: "never"
-- sandbox: "workspace-write"
+- sandbox: "danger-full-access"
 - include-plan-tool: false
 
 ## Artifact persistence
 
-The planner subagent must always persist its final output to:
+The main agent must always persist the plan to:
 - .ai/artifacts/latest-plan.md
 
-The reviewer subagent must always persist its final output to:
+The main agent must always persist the review to:
 - .ai/artifacts/latest-review.md
 
 These files should be overwritten on each run and contain only the finalized artifact.

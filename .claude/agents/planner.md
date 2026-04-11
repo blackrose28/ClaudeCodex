@@ -2,8 +2,11 @@
 name: planner
 description: Plan implementation work before any substantial code changes are made
 tools: Read, Glob, Grep
+mcpServers:
+  - codex
+  - playwright
 model: sonnet
-maxTurns: 15
+maxTurn: 150
 color: blue
 ---
 

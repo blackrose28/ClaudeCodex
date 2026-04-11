@@ -2,8 +2,11 @@
 name: reviewer
 description: Review Codex changes against the approved plan and verify correctness
 tools: Read, Glob, Grep, Bash, Write, Edit
+mcpServers:
+  - codex
+  - playwright
 model: sonnet
-maxTurns: 15
+maxTurns: 150
 color: purple
 ---
 
@@ -26,9 +29,6 @@ Bug-specific review checklist:
 - Do the reproduction steps now succeed?
 - Was a regression test added or updated when appropriate?
 - Could closely related cases still fail?
-
-After producing the final review, also write it to:
-.ai/artifacts/latest-review.md
 
 Rules:
 - Overwrite the file each run.
