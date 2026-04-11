@@ -1,3 +1,5 @@
+Coding new feature:
+
 Implement this task using the repo workflow:
 
 <TASK HERE>
@@ -11,5 +13,27 @@ Instructions:
 6. End with:
    - final verdict
    - files changed
+   - tests run
+   - remaining risks
+
+-----------------------------------------------------------------------------------------
+Fixing bug:
+
+Handle this as a bug using the repo workflow:
+
+<BUG REPORT>
+
+Instructions:
+1. Use the bug-triager subagent first.
+2. Show me the triage result.
+3. After approval, call Codex MCP to investigate, diagnose, and fix.
+4. Require Codex to explain the likely root cause before patching.
+5. Then use the reviewer subagent to verify the fix.
+6. If review fails, do one Codex fix round and review again.
+7. End with:
+   - final verdict
+   - root cause summary
+   - files changed
+   - commands run
    - tests run
    - remaining risks
