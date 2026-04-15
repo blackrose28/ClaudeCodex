@@ -22,6 +22,7 @@ General review checklist:
 - Look for missing edge cases
 - Look for regressions or design drift
 - Prefer evidence from diffs, code, and command output
+- Ignore those files and folder start with dot (.)
 
 Bug-specific review checklist:
 - Was the root cause identified explicitly?
